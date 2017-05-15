@@ -1,0 +1,692 @@
+.woocommerce-account {
+
+	.page-title 
+	{
+		margin: 0;
+	}
+
+	.woocommerce 
+	{
+
+		padding: 30px 15px;
+
+		@media #{$large-up}  
+		{
+			padding: 0;
+		}
+
+		h2 
+		{
+			font-size: rem-calc(30);
+			margin-bottom: 0;
+
+			@media #{$large-up}  
+			{
+				font-size: $h1-font-size;
+				line-height: 1.2;	
+			}
+			
+		}
+
+		> address 
+		{
+			width: 50%;
+			font-style: normal;
+			margin-bottom: 0;
+
+			@media #{$large-up}
+			{
+				margin-bottom: 100px;
+			}
+		}
+
+		table 
+		{
+			thead 
+			{
+				display: none; 
+
+				@media #{$large-up}
+				{
+					display: table-header-group;
+				}
+
+				tr 
+				{
+					border-bottom: 2px solid #f0f0f0;
+				}
+			}
+
+			tr 
+			{
+				display: block;
+				margin-bottom: 40px;
+				padding-bottom: 25px;
+
+				@media #{$large-up}  
+				{
+					margin-bottom: 0;
+					padding-bottom: 0;
+					display: table-row;
+				}
+			}
+		}
+
+		table 
+		{
+
+			&.my_account_orders 
+			{
+				td
+				{
+					width: 100%;
+					display: block;
+					padding: 0;
+					margin-bottom: rem-calc(15);
+
+					
+					&:before 
+					{
+						content: attr(data-title) ":";
+						display: block;
+						width: 100%;
+						font-weight: normal;
+						text-transform: uppercase;
+						font-size: rem-calc(12);
+					}
+					
+
+					@media #{$large-up}
+					{
+						width: auto;
+						display: table-cell;
+						margin-bottom: 0;
+						padding: rem-calc(20) 0;
+
+						&:before 
+						{
+							content: "";
+							display: none;
+						}
+					}
+				}
+			}
+
+			td
+			{
+
+				&.order-number 
+				{
+					a 
+					{
+						font-weight: bold;
+						font-size: rem-calc(20);
+
+						@media #{$large-up}  
+						{
+							font-size: rem-calc(16);
+						}
+					}				
+				}
+
+				&.order-total
+				{
+					.amount 
+					{
+						font-weight: bold;
+					}
+				}
+
+				&.order-status 
+				{
+					font-weight: bold;
+				}
+
+				&.order-actions
+				{
+					text-align: left;
+					&:before 
+					{
+						display: none;
+					}
+
+					@media #{$large-up}
+					{
+						display: table-cell;
+						text-align: right;
+					}
+
+					.view 
+					{
+						padding: 0;
+						margin: 0;
+						background: transparent;
+						color: $anchor-font-color;
+						transition: all 0.3s;
+						padding-right: 10px;
+
+						@media #{$large-up} 
+						{
+							padding-left: 10px;
+							padding-right: 0;
+						}
+					}
+
+					@media #{$large-up}
+					{
+						// .view:hover 
+						// {
+						// 	color: $anchor-font-color-hover;
+						// }
+					}
+
+					a 
+					{
+						padding: 0;
+						margin: 0;
+						background: transparent;
+						padding-right: 10px;
+
+						@media #{$large-up} 
+						{
+							padding-left: 10px;
+							padding-right: 0;
+						}
+					}
+				}
+
+				&.order-date 
+				{
+					display: none;
+
+					@media #{$large-up}  
+					{
+						display: block;
+					}
+				}
+
+			}
+
+			th 
+			{
+				font-size: rem-calc(13);
+				font-weight: bold;
+			}
+
+		}
+
+		.woocommerce-MyAccount-navigation
+		{
+			padding: 0 0 20px 0;
+			margin: 0 0 20px 0;
+			//box-shadow: 0 0 0.3125em rgba(0,0,0,0.20);
+			border-bottom: 1px solid #f0f0f0;
+
+			@media #{$large-up}  
+			{
+				padding: 0;
+				margin: 0;
+				border: none;
+			}
+			
+			ul
+			{
+				list-style: none;
+				padding: 0;
+				margin: 0;
+
+				@media #{$large-up}  
+				{
+					margin: 60px 0 80px 0;
+				}
+				
+				li
+				{
+					display: block;
+					padding: 5px 0;
+
+					@media #{$large-up}  
+					{
+						display: inline-block;
+						padding: 0 20px;
+
+						&:first-child
+						{
+							padding-left: 0;
+						}
+
+						&:last-child
+						{
+							padding-right: 0;
+						}
+					}					
+
+					a {
+						display: inline-block;
+						font-weight: bold;
+						font-size: rem-calc(13);
+						letter-spacing: -0.03em;
+						opacity: .3;
+						text-transform: uppercase;
+						position: relative;
+						padding: 0 0 0 25px;
+
+						&:before 
+		                {
+		                    content: "\f1db";
+		                    font-family: FontAwesome;
+		                    text-rendering: auto;
+		                    -webkit-font-smoothing: antialiased;
+		                    -moz-osx-font-smoothing: grayscale;
+		                    font-size: 1.2em;
+		                    font-weight: normal;
+		                    position: absolute;
+		                    left: 0;
+		                    top: -0.2em;
+		                    transition: all 0.3s ease;
+		                }
+
+						&:hover
+						{
+							opacity: 1;
+
+							&:before 
+			                {
+			                    content: "\f111";
+			                }
+
+							@media #{$large-up}  
+							{
+								border-bottom: 2px solid #000;
+							}
+						}
+
+		                @media #{$large-up}  
+						{
+							padding: 5px 0;
+							font-size: rem-calc(18);
+							text-transform: none;
+							border-bottom: 2px solid transparent;
+
+							&:before 
+			                {
+			                	display: none;
+			                }
+						}
+					}
+
+					&.is-active
+					{
+						a {
+							opacity: 1;
+
+							&:before 
+			                {
+			                    content: "\f111";
+			                }
+
+							@media #{$large-up}  
+							{
+								border-bottom: 2px solid #000;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.woocommerce-MyAccount-content
+		{
+			> p:first-child
+			{
+				border-bottom: 2px solid #ffc741;
+				padding: 0 0 rem-calc(20) 0;
+				margin: 0 0 rem-calc(25) 0;
+
+				@media #{$large-up}  
+				{
+					padding: 0 0 rem-calc(35) 0;
+					margin: 0 0 rem-calc(40) 0;
+				}
+
+				a
+				{
+					color: $anchor-font-color;
+
+					&:hover {
+						opacity: .5;
+					}
+				}
+			}
+
+			> p:last-child
+			{
+				a
+				{
+					color: #ffc741;
+
+					&:hover {
+						opacity: .5;
+					}
+				}
+			}
+
+			mark 
+			{
+				background: transparent;
+				font-weight: bold;
+				color: inherit;
+			}
+		}
+
+		.myaccount_user 
+		{
+			padding-bottom: rem-calc(30);
+			margin-bottom: rem-calc(55);
+			font-size: rem-calc(14);
+
+
+			@media #{$large-up}  
+			{
+				margin-top: rem-calc(60);
+				font-size: rem-calc(18);
+				margin-bottom: rem-calc(90);
+			}
+
+			a, strong
+			{
+				font-weight: bold;
+				color: $anchor-font-color;
+			}
+		}
+
+		.my_account_orders
+		{
+			margin-top: rem-calc(5);
+			margin-bottom: rem-calc(20);
+
+			@media #{$large-up}  
+			{
+				margin-bottom: rem-calc(60);
+			}
+		}
+
+		.myaccount_address 
+		{
+			padding-top: rem-calc(0);
+			margin-top: rem-calc(0);
+			padding-right: rem-calc(20);
+
+			@media #{$large-up}  
+			{
+				padding-top: rem-calc(25);
+			}
+		}
+
+		.addresses 
+		{
+
+			padding-top: rem-calc(0);
+			margin-top: rem-calc(0);
+			padding-right: rem-calc(20);
+			// padding-bottom: rem-calc(20);
+
+			.col-1,
+			.col-2
+			{
+				float: none;
+			}
+
+			@media #{$large-up}  
+			{
+				margin-bottom: 100px;
+				padding-bottom: 0;
+			}
+					
+			.address 
+			{
+				position: relative;
+				padding-bottom: rem-calc(30);
+
+				@media #{$large-up}  
+				{
+					margin-bottom: 0;
+					padding-bottom: rem-calc(30);
+
+					&.col-1 
+					{
+						padding-right: 25px;
+						box-sizing: border-box;
+					}
+
+				}
+			}
+
+			header.title 
+			{
+				a.edit 
+				{
+					color: $anchor-font-color;
+					font-size: rem-calc(12);
+					text-transform: uppercase;
+					font-weight: bold;
+					position: absolute;
+					top: 100%;
+				}
+
+			}
+
+			address 
+			{
+				font-style: normal;
+				padding-bottom: 20px;
+				color: #000;
+			}
+
+		}
+
+		p.form-row
+		{
+			margin-bottom: 0;
+		}
+
+		.form-row-first,
+        .form-row-last
+        {
+            @media #{$medium-up}
+            {
+                width: 48%;
+                float: left;
+            }
+        }
+
+        .form-row-first
+        {
+        	margin-right: 4%;
+        }
+
+		#billing_address_1_field, #shipping_address_1_field
+		{
+			input 
+			{
+				margin-bottom: rem-calc(4);
+			}
+		}
+
+		form.edit-account
+		{
+			font-size: rem-calc(12);
+			margin-top: rem-calc(60);
+
+			fieldset 
+			{
+				margin: 0;
+				padding: 0;
+				border: none;
+				margin-top: rem-calc(80);
+
+				legend 
+				{
+					
+					font-weight: bold;
+					margin: 0;
+					padding: 0;
+					margin-bottom: rem-calc(60);
+					font-size: rem-calc(30);
+
+					@media #{$large-up}  
+					{
+						font-size: $h1-font-size;
+					}
+				}
+			}
+
+			input[type="submit"]
+			{
+				width: 100%;
+
+				@media #{$large-up}  
+				{
+					width: auto;
+				}
+			}
+		}
+
+		form 
+		{
+			h3 
+			{
+				margin: rem-calc(20) 0;
+				@media #{$large-up}  
+				{
+					margin: inherit;
+				}
+			}
+		}
+
+	}
+
+	&.woocommerce-edit-address
+	{
+		form 
+		{
+			h3 
+			{
+				font-size: rem-calc(30);
+				line-height: 1.2;
+				margin: 0;
+				padding: 0;
+				margin-bottom: 10px;
+
+				@media #{$large-up}  
+				{
+					font-size: rem-calc(64);
+					margin: 60px 0;
+				}
+			}
+
+			input[type="submit"]
+			{
+				margin-bottom: -20px;
+
+				@media #{$large-up}  
+				{
+					margin: 20px 0 48px 0;
+				}
+			}
+		}
+	}
+
+	&.woocommerce-edit-account
+	{
+
+		.woocommerce
+		{
+			@media #{$large-up}  
+			{
+				margin: 50px 0;
+			}
+
+			fieldset
+			{
+				border: none;
+				padding: 0;
+				margin-top: 40px;
+				margin-bottom: 0;
+
+				legend 
+				{
+					font-size: rem-calc(30);
+					line-height: 1.2;
+					margin-bottom: 25px;
+
+					@media #{$large-up}  
+					{
+						font-size: $h1-font-size;
+					}
+				}
+			}
+
+			input[type="submit"]
+			{
+				margin-top: 10px;
+				margin-bottom: -20px;
+			}
+		}
+	}
+
+	&.woocommerce-downloads
+	{
+		.woocommerce-Button
+		{
+			margin-right: 20px;
+			color: #FFF;
+		}
+	}
+
+}
+
+@media #{$large-up}  {
+
+	.woocommerce-account 
+	{
+
+		.woocommerce 
+		{
+			padding: rem-calc(30) 0;
+
+			#customer_login 
+			{
+				width: 50%;
+				position: relative;
+				margin: 0 auto;
+				padding: rem-calc(80);
+				background: #FFF;
+			}
+
+			form.lost_reset_password
+			{
+				width: 50%;
+				position: relative;
+				margin: 0 auto;
+				padding: rem-calc(80);
+				background: #FFF;
+			}
+
+			form.edit-account
+			{
+				background: #FFF;
+			}
+
+			.addresses 
+			{
+				.col-1,
+				.col-2
+				{
+					float: left;
+					padding-right: 100px;
+				}
+			}
+		}
+	}
+}

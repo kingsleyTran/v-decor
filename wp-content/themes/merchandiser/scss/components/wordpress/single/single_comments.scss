@@ -1,0 +1,258 @@
+// .comments_section
+// {
+// 	background: #f7f7f7;
+
+// 	#comments
+// 	{
+// 		padding: 0 30px;
+
+// 		@media #{$medium-up}  
+//         {
+//         	padding: 0;
+//         }
+// 	}
+
+// 	.comments-number
+// 	{
+// 		font-size: 20px;
+// 		font-weight: bold;
+// 		text-align: center;
+// 		background: url(../images/comment.png) center center no-repeat;
+// 		height: 46px;
+// 		width: 46px;
+// 		line-height: 50px;
+// 		margin: 0 auto;
+// 		margin-top: 10px;
+// 		cursor: pointer;
+
+// 		@media #{$medium-up}  
+//         {
+//         	margin-top: 100px;
+//         }
+// 	}
+
+// 	h2.comments-title
+// 	{
+// 		text-align: center;
+// 		margin-bottom: 40px;
+// 		margin-top: 20px;
+// 		-ms-word-wrap: break-word;
+// 		word-wrap: break-word;
+// 		font-size: rem-calc(18);
+// 		line-height: rem-calc(26);
+
+// 		@media #{$medium-up}  
+//         {
+//         	font-size: rem-calc(30);
+// 			line-height: 1.2;
+// 			margin-bottom: 100px;
+//         }
+// 	}
+
+// 	ul 
+// 	{
+// 		li 
+// 		{
+// 			border-top: solid 1px #e7e7e7;
+
+// 			article 
+// 			{
+// 				width: 100%;
+// 				margin: 0 auto;
+// 				padding: 30px 0;
+
+// 				@media #{$medium-up}  
+// 		        {
+// 		        	width: 50%;
+// 					margin: 0 auto;
+// 					padding: 50px 0;
+// 		        }
+
+// 				.comment-content
+// 				{
+// 					width: 100%;
+// 					display: inline-block;
+// 					margin: 0;
+// 					padding: 0;
+
+// 				    @media #{$medium-up}  
+// 		        	{
+// 		        		padding: 10px 0 0 100px;
+// 				    	position: relative;
+// 				    	margin-bottom: 60px;
+// 		        	}
+// 				}
+
+// 				.author-info
+// 				{
+// 					float: left;
+// 					width: 100%;
+
+// 					@media #{$medium-up}  
+// 		        	{
+// 		        		float: left;
+// 						width: 25%;
+// 		        	}
+// 				}
+
+// 				h3.comment-author 
+// 				{
+// 					font-size: rem-calc(16);
+// 					font-weight: bold;
+// 					text-align: center;
+// 					line-height: 1.2;
+// 					margin-top: 5px;
+
+// 					@media #{$medium-up}  
+// 		        	{
+// 		        		font-size: rem-calc(20);
+// 		        		text-align: left;
+// 		        		margin-top: 0;
+// 		        	}
+// 				}
+
+// 				.comment-author-avatar
+// 				{
+// 					width: 50px;
+// 				    height: 50px;
+// 				    position: absolute;
+// 				    top: 0;
+// 				    left: 0;
+
+// 				    @media #{$medium-up}  
+// 		        	{
+// 		        		width: 70px;
+// 				    	height: 70px;
+// 		        	}
+// 				}
+
+// 				.comment-author-avatar img
+// 				{
+// 					border-radius: 50%;
+// 				}
+
+// 				.comment-metadata
+// 				{
+// 					font-size: rem-calc(12);
+// 					text-align: center;
+
+// 					@media #{$medium-up}  
+// 		        	{
+// 		        		text-align: left;
+// 		        	}
+// 				}
+
+// 				.comment-text
+// 				{
+// 					font-size: rem-calc(16);
+// 					float: left;
+// 					width: 100%;
+
+// 					@media #{$medium-up}  
+// 		        	{
+// 		        		width: 75%;
+// 		        	}
+
+// 					p 
+// 					{
+// 						margin-bottom: rem-calc(20);
+// 					}
+
+// 					.comment-reply, .comment-edit-link {
+// 						font-size: rem-calc(12);
+// 						font-weight: bold;
+// 						text-transform: uppercase;
+// 						color: #000;
+// 					}
+// 				}
+// 			}
+// 		}
+
+// 		&.comment-list 
+// 		{
+// 			// overflow: hidden;
+// 			// max-height: 0;
+// 			transition: all .5s;
+
+// 			&.open 
+// 			{
+// 				max-height: 2000px;
+// 			}
+
+// 			> li 
+// 			{
+
+// 				&:last-child 
+// 				{
+// 					border-bottom: solid 1px #e7e7e7;
+// 				}
+// 			}
+// 		}
+// 	}
+
+// 	#respond
+// 	{
+// 		width: 100%;
+// 		margin: 0 auto;
+// 		transition: all .5s;
+
+// 		@media #{$medium-up}  
+//     	{
+//     		width: 50%;
+//     	}
+
+// 		&.open 
+// 		{
+// 			max-height: 2000px;
+// 		}
+
+// 		#reply-title
+// 		{
+// 			text-align: center;
+// 			font-size: rem-calc(20);
+// 			padding-top: 30px;
+
+// 			@media #{$medium-up}  
+//     		{
+// 				font-size: rem-calc(36);
+// 				padding-top: 100px;
+//     		}
+// 		}
+
+// 		.logged-in-as, .comment-notes
+// 		{
+// 			text-align: center;
+// 			font-size: rem-calc(16);
+// 			margin-bottom: 30px;
+
+// 			@media #{$medium-up}  
+//     		{
+//     			font-size: rem-calc(18);
+// 				margin-bottom: 70px;
+//     		}
+// 		}
+
+// 		label
+// 		{
+// 			font-size: rem-calc(12);
+// 			font-weight: bold;
+// 		}
+
+// 		textarea 
+// 		{
+// 			border: none;
+// 			border-bottom: solid 2px #dedede;
+// 		}
+
+// 		input[type="text"], input[type="email"], input[type="url"] 
+// 		{
+// 			border: none;
+// 			border-bottom: solid 2px #dedede;
+// 		}
+
+// 		#submit 
+// 		{
+// 			width: 100%;
+// 		}
+// 	}
+// }
