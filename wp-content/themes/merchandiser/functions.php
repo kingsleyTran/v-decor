@@ -117,3 +117,10 @@ if ( is_admin() )
 		$plugin_update = new GetbowtiedToolsUpdater('1.0.1', 'https://my.getbowtied.com/getbowtied-tools/update.php', 'getbowtied-tools/index.php');
 	}
 }
+
+//enqueues our external font awesome stylesheet
+function enqueue_our_required_stylesheets(){
+	wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'); 
+	wp_enqueue_style('hover', 'http://localhost/v-decor/wp-content/themes/merchandiser/css/hover-min.css');
+}
+add_action('wp_enqueue_scripts','enqueue_our_required_stylesheets');

@@ -2,16 +2,8 @@
             overflow: hidden;
         }
         .image-preview {
-            width: 200px;
-            height: 200px;
             position: absolute!important;
-            overflow: hidden;
-            background-color: #ffffff;
-            color: #ecf0f1;
-            box-shadow: rgb(136, 136, 136) -5px 5px 5px;
-            background-image: url('img/empty.jpg');
-            background-size: cover;
-            background-repeat: no-repeat;
+            background-color: transparent;
             overflow: visible;
         }
         .image-preview input{
@@ -115,7 +107,6 @@
     background-size: 100%;
     bottom: 0px;
     position: relative;
-    top: -19px;
     box-shadow: none!important;
     opacity: 0.3;
     float: right;
@@ -164,7 +155,6 @@
 }
 .close_box{
     position: relative;
-    top: -20px;
     float: right;
     z-index: 10000000;
     color: black;
@@ -186,4 +176,11 @@
 }
 .fa{
     box-shadow: none!important;
+}
+.image-preview .ui-wrapper{
+    border: dashed 1px;
+}
+.image-preview .image{
+    min-width: 200px;
+    min-height: 200px;
 }

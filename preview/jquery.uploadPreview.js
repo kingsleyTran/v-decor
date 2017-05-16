@@ -25,15 +25,19 @@
 
               // Load file
               reader.addEventListener("load",function(event) {
-                var loadedFile = event.target;
+                var loadedFile = event.target.result;
 
                 // Check format
                 if (file.type.match('image')) {
                   // Image
-                  $(settings.preview_box).css("background-image", "url("+loadedFile.result+")");
-                  $(settings.preview_box).css("background-size", "cover");
-                  $(settings.preview_box).css("background-position", "center center");
-                } else if (file.type.match('audio')) {
+					if (settings.preview_box != '#room' && $(settings.preview_box + ' .image')){
+						$(settings.preview_box + ' .image').attr("src", loadedFile);
+					} else {
+						$(settings.preview_box).css("background-image", "url("+loadedFile+")");
+						$(settings.preview_box).css("background-size", "cover");
+						$(settings.preview_box).css("background-position", "center center");
+					}
+				} else if (file.type.match('audio')) {
                   // Audio
                   $(settings.preview_box).html("<audio controls><source src='" + loadedFile.result + "' type='" + file.type + "' />Your browser does not support the audio element.</audio>");
                 } else {
