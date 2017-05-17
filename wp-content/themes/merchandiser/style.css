@@ -9,3 +9,7 @@ Text Domain: getbowtied
 License:
 License URI:
 */
+
+.site-title a{
+	text-transform: uppercase;
+}
